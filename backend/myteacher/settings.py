@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app.apps.AppConfig' #Aqui eu estou instalando/plugando esse app no meu projeto myteacher
+    'app.apps.AppConfig', #Aqui eu estou instalando/plugando esse app no meu projeto myteacher
+    'appteacher.apps.AppteacherConfig', #Instalando appteacher ao projeto myteacher
+    'rest_framework' #Instalando o django rest framework pra fazer APIS
 ]
 
 MIDDLEWARE = [
