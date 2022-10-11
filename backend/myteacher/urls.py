@@ -16,10 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from app.views import HomeApiView, home, json
+from appteacher.views import ProfessorAPIView, CadastrarAulaAPIView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home), #Aqui to setando a função home, para que o path que vou passar pra ela seja nenhum, ou seja, a propria pagina o localhost (http://127.0.0.1:8000)
     path('json/', json), #Aqui to setando a função json la do  views.py, passando pra ela o http http://127.0.0.1:8000/json/
-    path('apijson/', HomeApiView.as_view())
+    path('apijson/', HomeApiView.as_view()),
+    path('professoresapi/', ProfessorAPIView.as_view()),
+    path('professores/<int:id>/aulas/', CadastrarAulaAPIView.as_view()) #O <int:id> significa que na url eu vou ter uma variavel
 ]
