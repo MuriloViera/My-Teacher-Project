@@ -4,13 +4,12 @@ import { styled } from "@mui/material";
 
 export const ListaStyled = styled('ul')`
     width: 100%;
-    max-width: 900px;
+    max-width: 700px;
     margin: 0 auto;
     padding: ${({theme}) => theme.spacing(10, 2 , 10, 2)};
     display: grid;
     grid-template-columns: 1fr 1fr; //So lembrando que fr é fração, ou seja, 1fr e 1fr é igual a 50% e 50%
-    gap: 5vw;
-
+    gap: 10vw;
     ${({theme}) => theme.breakpoints.down('md')}{ //estilos que serao aplicados quando o tamanho da tela ser menor que medio
         grid-template-columns: 1fr;
         gap: 8vh; 
